@@ -29,13 +29,14 @@ function App() {
         alignItems: 'center',
         justifyContent: 'center',
         gap: '0.5rem',
+        padding: '0px 30px',
       }}>
         <div style={{
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'center',
-          gap: '0.5rem'
+          gap: '0.5rem',
         }}>
         <WarningOctagon size={32}     style={
           {color: 'red'}
