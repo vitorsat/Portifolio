@@ -1,21 +1,24 @@
 import { GithubLogo, InstagramLogo, LinkedinLogo, WarningOctagon } from "phosphor-react"
 import './App.css'
 import { Analytics } from '@vercel/analytics/react';
-
+// import video from './assets/video.mp4'
 
 function App() {
 
   return (
     <>
     <Analytics />
+    {/* <video src={video} autoPlay muted loop id="myVideo" className="myVideo" typeof="video/mp4"/> */}
     <main 
       style={{
+        position: 'relative',
+        backgroundImage: 'linear-gradient(rgba(12,3,51,0.3), rgba(12,3,51,0.3)',
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
         height: '100vh',
-        width: '100vw',
+        width: '100%',
         textAlign: 'center',
         gap: '1rem'
       }}
@@ -25,7 +28,7 @@ function App() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        gap: '0.5rem'
+        gap: '0.5rem',
       }}>
         <div style={{
           display: 'flex',
@@ -45,8 +48,8 @@ function App() {
         }}
         > Em desenvolvimento...</p>
         </div>
-      <h1>Oi, me chamo Vitor Saturnino</h1>
-      <p>Sou um desenvolvedor fullstack, atuando com React e Node</p>
+      <h1>Vitor Saturnino</h1>
+      <p>Desenvolvedor fullstack, atuando com React e Node</p>
       <div>
       <LinkedinLogo size={50} style={
         {cursor: 'pointer'}
@@ -67,6 +70,7 @@ function App() {
         () => window.open('https://www.instagram.com/_vitormiguell/')
       }/>
       </div>
+      {/* <footer>Video by <a href="https://www.youtube.com/@junaidusman4376" target="_blank">@junaidusman4376</a></footer> */}
       </div>
     </main>
     </>
