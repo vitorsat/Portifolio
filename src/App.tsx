@@ -1,14 +1,14 @@
 import { GithubLogo, InstagramLogo, LinkedinLogo, WarningOctagon } from "phosphor-react"
 import './App.css'
 import { Analytics } from '@vercel/analytics/react';
-// import video from './assets/video.mp4'
+import video from './assets/video.mp4'
 
 function App() {
 
   return (
     <>
     <Analytics />
-    {/* <video src={video} autoPlay muted loop id="myVideo" className="myVideo" typeof="video/mp4"/> */}
+    <video src={video} autoPlay muted loop id="myVideo" className="myVideo" typeof="video/mp4"/>
     <main 
       style={{
         position: 'relative',
@@ -70,7 +70,7 @@ function App() {
         () => window.open('https://www.instagram.com/_vitormiguell/')
       }/>
       </div>
-      {/* <footer>Video by <a href="https://www.youtube.com/@junaidusman4376" target="_blank">@junaidusman4376</a></footer> */}
+      <footer>Video by <a href="https://www.youtube.com/@junaidusman4376" target="_blank">@junaidusman4376</a></footer>
       </div>
     </main>
     </>
