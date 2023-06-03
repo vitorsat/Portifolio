@@ -1,0 +1,29 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+  }
+
+  body {
+    background-color: #e2e8f0;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body, input, button, textarea {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+  }
+
+  svg:hover {
+    cursor: pointer;
+    color: #4a5568;
+  }
