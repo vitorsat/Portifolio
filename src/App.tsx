@@ -1,8 +1,13 @@
 import { GithubLogo, InstagramLogo, LinkedinLogo, WarningOctagon } from "phosphor-react"
 import './App.css'
+import { Analytics } from '@vercel/analytics/react';
+
 
 function App() {
+
   return (
+    <>
+    <Analytics />
     <main 
       style={{
         display: 'flex',
@@ -64,6 +69,7 @@ function App() {
       </div>
       </div>
     </main>
+    </>
   )
 }
 
