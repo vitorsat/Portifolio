@@ -81,4 +81,15 @@ a:hover {
   text-decoration: underline;
 }   
 
+img {
+  transition: all 1s;
+  transform-origin: 50% 50%;
+}	
+
+img:hover {
+  cursor: pointer;
+  flex-grow: 1px;
+  transform: scale(1.2);
+}
+
 

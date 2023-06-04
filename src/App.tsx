@@ -4,10 +4,14 @@ import { Analytics } from '@vercel/analytics/react';
 import video from './assets/video.mp4'
 import song from './assets/song.mp3'
 import { useEffect, useRef, useState } from "react";
+import './locales/i18n'
+import { useTranslation } from 'react-i18next';
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false)
   const audioRef = useRef<HTMLAudioElement>(null);
+  const { t, i18n } = useTranslation();
+  const [language, setLanguage] = useState(i18n.language);
 
   useEffect(() => {
     const audioElement = audioRef.current;
@@ -26,6 +30,11 @@ function App() {
   const togglePlay = () => {
     setIsPlaying(!isPlaying)
   }
+
+  const handleChangeLanguage = (selectedLanguage: string) => {
+    setLanguage(selectedLanguage);
+    i18n.changeLanguage(selectedLanguage);
+  };
 
   return (
     <>
@@ -57,6 +66,30 @@ function App() {
       gap: '1rem',
       padding: '1rem', 
     }}>
+          <img
+    onClick={
+      () => handleChangeLanguage('pt')
+    }
+    style={{
+      color: language === 'pt' ? '#747d8c' : 'white',
+      cursor: 'pointer',
+    }}
+  alt="Brasil"
+  src="http://purecatamphetamine.github.io/country-flag-icons/3x2/BR.svg"
+  width="30"
+  />
+    <img
+    onClick={
+      () => handleChangeLanguage('en')
+    }
+    style={{
+      color: language === 'en' ? '#747d8c' : 'white',
+      cursor: 'pointer',
+    }}
+  alt="United States"
+  src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
+  width="30"
+  />
     {isPlaying ?
     <Pause size={32} onClick={togglePlay} style={{position:'static', top: '1rem', right: '1rem', cursor: 'pointer'}}/> :
     <Play size={32} onClick={togglePlay} style={{position:'static', top: '1rem', right: '1rem', cursor: 'pointer'}}/> 
@@ -86,10 +119,10 @@ function App() {
           padding: 0,
           border: 0,
         }}
-        > Em desenvolvimento...</p>
+        > {t('developing')}</p>
         </div>
       <h1>Vitor Saturnino</h1>
-      <p>Desenvolvedor fullstack, atuando com React e Node</p>
+      <p>{t('main.title')}</p>
       <div>
       <LinkedinLogo size={50} style={
         {cursor: 'pointer'}
