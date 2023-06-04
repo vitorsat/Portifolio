@@ -1,13 +1,36 @@
-import { GithubLogo, InstagramLogo, LinkedinLogo, WarningOctagon } from "phosphor-react"
+import { GithubLogo, InstagramLogo, LinkedinLogo, Pause, Play, WarningOctagon } from "phosphor-react"
 import './App.css'
 import { Analytics } from '@vercel/analytics/react';
 import video from './assets/video.mp4'
+import song from './assets/song.mp3'
+import { useEffect, useRef, useState } from "react";
 
 function App() {
+  const [isPlaying, setIsPlaying] = useState(false)
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  useEffect(() => {
+    const audioElement = audioRef.current;
+
+    if (audioElement) {
+      audioElement.volume = 0.1;
+
+      if (isPlaying) {
+        audioElement.play();
+      } else {
+        audioElement.pause();
+      }
+    }
+  }, [isPlaying]);
+  
+  const togglePlay = () => {
+    setIsPlaying(!isPlaying)
+  }
 
   return (
     <>
     <Analytics />
+     <audio src={song} ref={audioRef} loop/>
     <video src={video} autoPlay muted loop id="myVideo" className="myVideo" typeof="video/mp4"/>
     <main 
       style={{
@@ -23,6 +46,22 @@ function App() {
         gap: '1rem'
       }}
     >
+    <div style={{
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: '1rem',
+      padding: '1rem', 
+    }}>
+    {isPlaying ?
+    <Pause size={32} onClick={togglePlay} style={{position:'static', top: '1rem', right: '1rem', cursor: 'pointer'}}/> :
+    <Play size={32} onClick={togglePlay} style={{position:'static', top: '1rem', right: '1rem', cursor: 'pointer'}}/> 
+    }
+    </div>
       <div style={{
         display: 'flex',
         flexDirection: 'column',

@@ -26,9 +26,17 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+svg {
+  color: white;
+  transition: all 1s;
+  transform-origin: 50% 50%;
+}
+
 svg:hover {
   cursor: pointer;
   color: #4a5568;
+  flex-grow: 0.5px;
+  transform: scale(1.1);
 }
 
 .myVideo {
