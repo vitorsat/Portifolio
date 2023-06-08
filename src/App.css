@@ -1,9 +1,8 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   overflow-x: hidden;
 }
 
@@ -15,14 +14,22 @@ body {
   position: relative;
 }
 
-body, input, button, textarea {
-  font-family: 'Roboto', sans-serif;
+body,
+input,
+button,
+textarea {
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Merriweather', serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", serif;
   font-weight: 700;
 }
 
@@ -79,17 +86,15 @@ a {
 a:hover {
   color: #4a5568;
   text-decoration: underline;
-}   
+}
 
 img {
   transition: all 1s;
   transform-origin: 50% 50%;
-}	
+}
 
 img:hover {
   cursor: pointer;
   flex-grow: 1px;
   transform: scale(1.2);
 }
-
-
