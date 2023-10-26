@@ -159,7 +159,7 @@ function App() {
               {t("developing")}
             </p>
           </div>
-          <h1>Vitor Saturnino - Teste</h1>
+          <h1>Vitor Saturnino</h1>
           <p>{t("main.title")}</p>
           <div>
             <LinkedinLogo
