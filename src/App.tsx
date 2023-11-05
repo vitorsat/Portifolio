@@ -1,6 +1,6 @@
 import {
   GithubLogo,
-  InstagramLogo,
+  // InstagramLogo,
   LinkedinLogo,
   Pause,
   Play,
