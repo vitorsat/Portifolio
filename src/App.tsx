@@ -174,13 +174,13 @@ function App() {
               style={{ cursor: "pointer" }}
               onClick={() => window.open("https://github.com/vitorsat")}
             />
-            <InstagramLogo
+            {/* <InstagramLogo
               size={50}
               style={{ cursor: "pointer" }}
               onClick={() =>
                 window.open("https://www.instagram.com/_vitormiguell/")
               }
-            />
+            /> */}
           </div>
           <footer>
             Video by{" "}
