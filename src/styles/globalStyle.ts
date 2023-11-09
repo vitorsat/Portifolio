@@ -1,9 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import { createGlobalStyle } from "styled-components";
+import { colors } from "./theme";
 
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap");
-
+export const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
   padding: 0;
@@ -13,8 +11,8 @@
 }
 
 body {
-  background-color: #e2e8f0;
-  color: #ffffff;
+  background-color: ${colors.white_100};
+  color: ${colors.white};
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   position: relative;
@@ -47,30 +45,16 @@ svg {
 
 svg:hover {
   cursor: pointer;
-  color: #4a5568;
+  color: ${colors.gray};	
   flex-grow: 0.5px;
   transform: scale(1.1);
-}
-
-@media (min-aspect-ratio: 16/9) {
-  .myVideo {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-aspect-ratio: 16/9) {
-  .myVideo {
-    width: auto;
-    height: 100%;
-  }
 }
 
 footer {
   text-align: center;
   position: fixed;
   bottom: 20px;
-  color: #4a5568;
+  color: ${colors.gray};
   width: 100%;
   font-size: 0.8rem;
 }
@@ -81,7 +65,7 @@ a {
 }
 
 a:hover {
-  color: #4a5568;
+  color: ${colors.gray};
   text-decoration: underline;
 }
 
@@ -95,3 +79,4 @@ img:hover {
   flex-grow: 1px;
   transform: scale(1.2);
 }
+`;

@@ -1,5 +1,5 @@
+import StyledComponentsRegistry from "@/lib/registry";
 import { Merriweather } from "next/font/google";
-import "../styles/globals.css";
 
 const merriweather = Merriweather({
   subsets: ["latin"],
@@ -18,7 +18,9 @@ export default function RootLayout({
         <title>Vitor Saturnino</title>
       </head>
 
-      <body className={merriweather.className}>{children}</body>
+      <body className={merriweather.className}>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      </body>
     </html>
   );
 }
