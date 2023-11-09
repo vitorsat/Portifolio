@@ -1,9 +1,15 @@
-export const LanguagePT = {
-  developing: "Em desenvolvimento...",
-  "main.title": "Desenvolvedor fullstack, atuando com React e Node",
-};
+import ptJson from "./pt-br.json";
+import enJson from "./en-us.json";
 
-export const LanguageEN = {
-  developing: "Developing...",
-  "main.title": "Fullstack developer, working with React and Node",
-};
+const LanguagePT = ptJson;
+const LanguageEN = enJson;
+
+export function getLanguage(language: string) {
+  const languageWithoutRegionCode = language.toLowerCase().split(/[_-]+/)[0];
+
+  if (languageWithoutRegionCode === "pt") {
+    return LanguagePT;
+  } else {
+    return LanguageEN;
+  }
+}
