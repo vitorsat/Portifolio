@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import { colors } from "./theme";
+import { createGlobalStyle } from 'styled-components';
+import { colors } from './theme';
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
   font-family: "Merriweather", serif;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
 body {

@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { GlobalStyle } from "@/styles/globalStyle";
-import Home from "@/pages/Home";
+import { GlobalStyle } from '@/styles/globalStyle';
+import Home from '@/pages/Home';
 
 export default function Page() {
   return (
