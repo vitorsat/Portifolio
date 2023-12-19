@@ -1,4 +1,5 @@
 import StyledComponentsRegistry from '@/lib/registry';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Merriweather } from 'next/font/google';
 
 const merriweather = Merriweather({
@@ -13,9 +14,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" type="image/svg+xml" href="/alien.svg" />
         <title>Vitor Saturnino</title>
       </head>
-
       <body className={merriweather.className}>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <SpeedInsights />
       </body>
     </html>
   );
